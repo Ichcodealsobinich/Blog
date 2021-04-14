@@ -13,5 +13,11 @@ public class MainClass {
 	if (false) {
 		System.out.println("Bedingung war false");
 	}
+	for (int i = 1; i<11;i++) {
+		for (int j = 1;j <11 ; j++) {
+			int k = i+j;
+			System.out.println("I ist " + i + ". J ist " + j + ". I + j ist " + k);
+		}
+	}
     }
 }

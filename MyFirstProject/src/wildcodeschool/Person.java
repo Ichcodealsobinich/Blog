@@ -1,4 +1,4 @@
-package myFirstPackage;
+package wildcodeschool;
 
 public class Person extends Object {
 	private String vorname;

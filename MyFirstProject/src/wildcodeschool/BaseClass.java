@@ -1,4 +1,4 @@
-package myFirstPackage;
+package wildcodeschool;
 
 public class BaseClass {
 	//counter um für jede Instanz eine eigene Id zu vergeben

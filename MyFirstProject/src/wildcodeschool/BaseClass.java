@@ -10,6 +10,8 @@ public class BaseClass {
 	public BaseClass() {
 		this.id = BaseClass.getCount();
 	}
+	//diese Methode ist static, damit sie in der Klasse aufgerufen wird 
+	//und nicht in der Instanz
 	public static int getCount() {
 		++counter;
 		return (counter-1);
@@ -40,20 +42,18 @@ public class BaseClass {
         if (obj == null) { // null check
             return false;
         }
-
         if (this == obj) {// self check     
             return true;
         }
-
         if (getClass() != obj.getClass()) { // type check
             return false;
         }
-
         // type check and cast
-        BaseClass b = (BaseClass) obj; // cast to BaseClass
+        BaseClass b = (BaseClass) obj; // keine Ahnung was das bringen soll
         return this.getId()==b.getId();
 
     }
+	// Auch für Teil 3: Eine hashCode-Methode bereitstellen
 	//da jede Instanz eine eindeutige Id bekommt, ist sie auch ein gültiger Hashcode
 	public int hashCode() {
 		return this.getId();

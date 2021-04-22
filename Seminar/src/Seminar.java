@@ -6,13 +6,21 @@ public class Seminar {
 	
 	public boolean anmelden(Teilnehmer p) {
 		boolean result = false;
+		//Duplicate check
 		for (int i = 0; i< listeDerTeilnehmer.length; i++) {
-			if (listeDerTeilnehmer[i] == null) {
-				listeDerTeilnehmer[i] = p;
-				count++;
-				result= true;
-				break;
+			if (p!= null) { // equals nur möglich, wenn p nicht null ist
+				if (p.equals(listeDerTeilnehmer[i])) {
+					return false;
+				}
 			}
+		}
+		//insert new participant at the first free cell
+		//the first free cell is defined by the number of saved participants,
+		//not by the first cell with null
+		if (count < listeDerTeilnehmer.length) {
+			listeDerTeilnehmer[count]=p;
+			count++;
+			result=true;
 		}
 		return result;
 	}
@@ -24,6 +32,10 @@ public class Seminar {
 				listeDerTeilnehmer[i] = null;
 				count--;
 				result = true;
+				//all cells after i must shift 1 left
+				for (int j = i+1; j < listeDerTeilnehmer.length; j++) {
+					listeDerTeilnehmer[j-1] = listeDerTeilnehmer[j];  
+				}
 			}
 		}
 		return result;
@@ -55,4 +67,16 @@ public class Seminar {
 	public int number() {
 		return this.count;
 	}
+	
+	public void clear() {
+		//TODO
+	}
+	public boolean contains(Teilnehmer p) {
+		//TODO
+		return false;
+	}
+	public int indexOf(Teilnehmer p) {
+		//TODO
+		return -1;
+	}	
 }

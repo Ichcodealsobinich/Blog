@@ -22,10 +22,14 @@ public class Main {
 		sea4.anmelden(susi);
 		sea4.anmelden(peter);
 		sea4.anmelden(paul);
+		sea4.anmelden(new Teilnehmer());
+		sea4.anmelden(null);
 		
-		System.out.println(sea4.getPerson(0).getVorname());
-		//System.out.println(sea4.getPerson(1).getVorname());
-		System.out.println(sea4.getPerson(2).getVorname());
+		System.out.println(sea4.getPerson(0));
+		System.out.println(sea4.getPerson(1));
+		System.out.println(sea4.getPerson(1));
+		System.out.println(sea4.getPerson(3));
+		System.out.println(sea4.number());
 		
 		sea4.abmelden(peter);
 		System.out.println(sea4.number());

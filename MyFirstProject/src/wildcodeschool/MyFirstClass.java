@@ -15,8 +15,7 @@ public class MyFirstClass {
 		System.out.println(person3.equals(person3));
 		System.out.println(person1.equals(person3) + " " + person3.equals(person1));
 		System.out.println(person3.equals(person2) + " " + person2.equals(person3));
-		
-		
+
 		//BaseClass testen
 		BaseClass b1 = new BaseClass();
 		BaseClass b2 = new BaseClass();

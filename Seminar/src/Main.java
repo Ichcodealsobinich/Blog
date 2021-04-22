@@ -18,23 +18,23 @@ public class Main {
 		paul.setNachname("Paulus");
 		paul.setAlter(30);
 		
-		Seminar sea4 = new Seminar();
+		Verwaltungsgruppe sea4 = new Verwaltungsgruppe();
 		sea4.anmelden(susi);
 		sea4.anmelden(peter);
 		sea4.anmelden(paul);
 		sea4.anmelden(new Teilnehmer());
 		sea4.anmelden(null);
 		
-		System.out.println(sea4.getTeilnehmer(0));
-		System.out.println(sea4.getTeilnehmer(1));
-		System.out.println(sea4.getTeilnehmer(1));
-		System.out.println(sea4.getTeilnehmer(3));
-		System.out.println(sea4.anzahlTeilnehmer());
+		System.out.println(sea4.getObject(0));
+		System.out.println(sea4.getObject(1));
+		System.out.println(sea4.getObject(1));
+		System.out.println(sea4.getObject(3));
+		System.out.println(sea4.anzahlObjects());
 		
 		sea4.abmelden(peter);
-		System.out.println(sea4.anzahlTeilnehmer());
+		System.out.println(sea4.anzahlObjects());
 		
-		Teilnehmer[] test = sea4.getAll();
+		Teilnehmer[] test = (Teilnehmer[])sea4.getAll();
 		System.out.println(test[0].getVorname());
 	}
 

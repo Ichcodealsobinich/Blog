@@ -1,7 +1,6 @@
 
 public interface VerwaltungsInterface {
-	boolean anmelden(Teilnehmer einTeilnehmer);
-	int anzahlTeilnehmer();
-	Teilnehmer getTeilnehmer(int i);
-	
+	boolean anmelden(Object einObject);
+	int anzahlObjects();
+	Object getObject(int i);	
 }

@@ -25,14 +25,14 @@ public class Main {
 		sea4.anmelden(new Teilnehmer());
 		sea4.anmelden(null);
 		
-		System.out.println(sea4.getPerson(0));
-		System.out.println(sea4.getPerson(1));
-		System.out.println(sea4.getPerson(1));
-		System.out.println(sea4.getPerson(3));
-		System.out.println(sea4.number());
+		System.out.println(sea4.getTeilnehmer(0));
+		System.out.println(sea4.getTeilnehmer(1));
+		System.out.println(sea4.getTeilnehmer(1));
+		System.out.println(sea4.getTeilnehmer(3));
+		System.out.println(sea4.anzahlTeilnehmer());
 		
 		sea4.abmelden(peter);
-		System.out.println(sea4.number());
+		System.out.println(sea4.anzahlTeilnehmer());
 		
 		Teilnehmer[] test = sea4.getAll();
 		System.out.println(test[0].getVorname());

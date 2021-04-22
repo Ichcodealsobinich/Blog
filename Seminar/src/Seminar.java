@@ -1,5 +1,5 @@
 
-public class Seminar {
+public class Seminar implements VerwaltungsInterface{
 	
 	private Teilnehmer[] listeDerTeilnehmer = new Teilnehmer[15];
 	private int count = 0;
@@ -41,7 +41,7 @@ public class Seminar {
 		return result;
 	}
 
-	public Teilnehmer getPerson(int index) {
+	public Teilnehmer getTeilnehmer(int index) {
 		if (index < this.listeDerTeilnehmer.length && index >=0) {
 			return this.listeDerTeilnehmer[index];
 		} else {
@@ -64,7 +64,7 @@ public class Seminar {
 		return result;
 	}
 	
-	public int number() {
+	public int anzahlTeilnehmer() {
 		return this.count;
 	}
 	

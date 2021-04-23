@@ -27,7 +27,7 @@ public class Main {
 		
 		System.out.println(sea4.getObject(0));
 		System.out.println(sea4.getObject(1));
-		System.out.println(sea4.getObject(1));
+		System.out.println(sea4.getObject(2));
 		System.out.println(sea4.getObject(3));
 		System.out.println(sea4.size());
 		
@@ -47,6 +47,14 @@ public class Main {
 		System.out.println(movieList.get(0).toString());
 		System.out.println(movieList.get(1).toString());
 		System.out.println(movieList.get(2).toString());
+		
+		
+		//Linked List
+		LinkedList.MyLinkedListImplementation myList = new LinkedList.MyLinkedListImplementation();
+		myList.add(peter);
+		myList.add(paul);
+		System.out.println(myList.getFirst());
+		System.out.println(myList.getLast());
 	}
 
 }

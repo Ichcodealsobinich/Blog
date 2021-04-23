@@ -18,24 +18,35 @@ public class Main {
 		paul.setNachname("Paulus");
 		paul.setAlter(30);
 		
-		Verwaltungsgruppe sea4 = new Verwaltungsgruppe();
-		sea4.anmelden(susi);
-		sea4.anmelden(peter);
-		sea4.anmelden(paul);
-		sea4.anmelden(new Teilnehmer());
-		sea4.anmelden(null);
+		VerwaltungsgruppeFrederik sea4 = new VerwaltungsgruppeFrederik();
+		sea4.add(susi);
+		sea4.add(peter);
+		sea4.add(paul);
+		sea4.add(new Teilnehmer());
+		sea4.add(null);
 		
 		System.out.println(sea4.getObject(0));
 		System.out.println(sea4.getObject(1));
 		System.out.println(sea4.getObject(1));
 		System.out.println(sea4.getObject(3));
-		System.out.println(sea4.anzahlObjects());
+		System.out.println(sea4.size());
 		
-		sea4.abmelden(peter);
-		System.out.println(sea4.anzahlObjects());
+		sea4.remove(peter);
+		System.out.println(sea4.size());
+		System.out.println(sea4.contains(paul));
+		System.out.println(sea4.indexOf(paul));
 		
-		Teilnehmer[] test = (Teilnehmer[])sea4.getAll();
-		System.out.println(test[0].getVorname());
+		//Quest 856
+		Quest856.Movies movieList = new Quest856.Movies();
+		Quest856.Movie raidersOfTheLostArk = new Quest856.Movie("Raiders of the Lost Ark" ,new String[] {"Harrison Ford", "Karen Allen", "Paul Freeman"});
+		Quest856.Movie templeOfDoom = new Quest856.Movie("Indiana Jones and the Temple of Doom", new String[] {"Harrison Ford","Kate Capshaw", "Ke Huy Quan"});
+		Quest856.Movie lastCrusade = new Quest856.Movie("Indiana Jones and the Last Crusade",new String[]{"Harrison Ford", "Sean Connery", "Denholm Elliott"});
+		movieList.add(raidersOfTheLostArk);
+		movieList.add(templeOfDoom);
+		movieList.add(lastCrusade);
+		System.out.println(movieList.get(0).toString());
+		System.out.println(movieList.get(1).toString());
+		System.out.println(movieList.get(2).toString());
 	}
 
 }
